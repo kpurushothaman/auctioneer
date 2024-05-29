@@ -62,16 +62,6 @@ func namedBidderInitialAmountMaxBid(name, time string, initialAmount, maxBid int
 	}
 }
 
-func highBidder(bidTime string) Bidder {
-	return Bidder{
-		GUID: "High",
-		BidStrategy: BidStrategy{
-			MaxBidCents:       30000,
-			BidIncrementCents: 500,
-		},
-	}
-}
-
 func TestSortBidders(t *testing.T) {
 	tests := map[string]struct {
 		bidders  []Bidder
